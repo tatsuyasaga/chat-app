@@ -21,8 +21,6 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:content).merge(user_id: current_user.id)
-=======
->>>>>>> parent of a242ed5 (メッセージ送信機能の実装)
+    params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
   end
 end

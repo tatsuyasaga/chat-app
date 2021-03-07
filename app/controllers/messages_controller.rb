@@ -1,6 +1,5 @@
 class MessagesController < ApplicationController
   def index
-<<<<<<< HEAD
     @message = Message.new
     @room = Room.find(params[:room_id])
     @messages = @room.messages.includes(:user)
